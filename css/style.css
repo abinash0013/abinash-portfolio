@@ -1,0 +1,714 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Ubuntu:wght@400;500;700&display=swap");
+/* ::::::::::::::::::::::::::::::::::::::::::::::::::::::: global style start*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+html {
+    scroll-behavior: smooth;
+}
+/* ::::::::::::::::::::::::::::::::::::::::::::::::::::::: global style finished*/
+
+/* ::::::::::::::::::::::::::::::::::::::::::::::::::::::: navbar style start*/
+.max-width {
+    max-width: 1300px;
+    padding: 0 80px;
+    margin: auto;
+}
+.navbar {
+    position: fixed;
+    z-index: 999;
+    width: 100%;
+    padding: 30px 0;
+    background: transparent;
+    font-family: "ubuntu", sans-serif;
+}
+.navbar.sticky {
+    padding: 15px 0;
+    background: #ff3503;
+}
+.navbar .max-width {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.navbar .logo a {
+    color: #fff;
+    font-size: 35px;
+    font-weight: 600;
+}
+.navbar .logo a span {
+    color: #ff3503;
+}
+.navbar.sticky .logo a span {
+    color: #fff;
+    transition: all 0.3s ease;
+}
+.navbar .menu li {
+    list-style: none;
+    display: inline-block;
+}
+.navbar .menu li a {
+    display: block;
+    color: #fff;
+    font-size: 18px;
+    font-weight: 500;
+    margin: 0px 15px;
+}
+.navbar .menu li a:hover::before {
+    color: #ff3503;
+}
+.navbar.sticky .menu li a:hover::after {
+    color: #fff;
+    transition: all 0.3s ease;
+}
+/* ::::::::::::::::::::::::::::::::::::::::::::::::::::::: navbar style finished*/
+
+/* ::::::::::::::::::::::::::::::::::::::::::::::::::::::: menu btn style start*/
+.menu-btn {
+    color: #fff;
+    font-size: 23px;
+    cursor: pointer;
+    display: none;
+}
+.scroll-up-btn {
+    position: fixed;
+    height: 45px;
+    width: 42px;
+    background: #ff3503;
+    right: 30px;
+    bottom: 10px;
+    text-align: center;
+    line-height: 45px;
+    color: #fff;
+    z-index: 999;
+    font-size: 30px;
+    border-radius: 6px;
+    cursor: pointer;
+    opacity: 0;
+    pointer-events: none;
+    transition: all 0.3s ease;
+}
+.scroll-up-btn.show {
+    opacity: 1;
+    pointer-events: auto;
+    bottom: 12px;
+}
+/* ::::::::::::::::::::::::::::::::::::::::::::::::::::::: menu btn style finished*/
+
+/* ::::::::::::::::::::::::::::::::::::::::::::::::::::::: home style start*/
+.home {
+    display: flex;
+    height: 100vh;
+    color: #fff;
+    min-height: 500px;
+    background: #000 no-repeat center;
+}
+/* .home .max-width {
+    margin: auto 0 auto 0;
+} */
+.home .home-content .text-1 {
+    font-size: 27px;
+}
+.home .home-content .text-2 {
+    font-size: 45px;
+}
+.home .home-content .text-2 .name {
+    font-size: 75px;
+    font-weight: 600;
+    color: #ff3503;
+}
+.home .home-content .text-3 {
+    font-size: 40px;
+    font-weight: 600;
+    margin: 5px 0;
+}
+.home .home-content .text-3 span {
+    color: #ff3503;
+}
+.home .home-content .text-3 .underline {
+    text-decoration: underline;
+}
+.home .home-content a {
+    background: #ff3503;
+    color: #fff;
+    display: inline-block;
+    border-radius: 5px;
+    font-size: 25px;
+    padding: 10px 30px;
+    margin: 10px 0;
+    transition: all 0.3s ease;
+    border: 1px solid #ff3503;
+}
+.home .home-content a:hover {
+    background: none;
+    color: #ff3503;
+    border: 1px solid #ff3503;
+}
+/* ::::::::::::::::::::::::::::::::::::::::::::::::::::::: home style finished*/
+
+/* ::::::::::::::::::::::::::::::::::::::::::::::::::::::: all related style start*/
+.about,
+.project,
+.skills,
+.feedback,
+.contact,
+footer {
+    font-family: "poppins", sans-serif;
+}
+section {
+    padding: 100px 0;
+}
+section .title {
+    font-size: 40px;
+    font-weight: 500;
+    margin-bottom: 60px;
+    padding-bottom: 40px;
+    text-align: center;
+    position: relative;
+    font-family: "ubuntu", sans-serif;
+}
+section .title::before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    width: 180px;
+    height: 3px;
+    background: #111;
+    transform: translateX(-50%);
+}
+section .title::after {
+    content: "who i am";
+    position: absolute;
+    bottom: -12px;
+    left: 50%;
+    padding: 5px;
+    font-size: 20px;
+    color: #ff3503;
+    background: #fff;
+    transform: translateX(-50%);
+}
+.about .about-content,
+.project .serv-content,
+.skills .skills-content,
+.contact .contact-content {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+}
+/* ::::::::::::::::::::::::::::::::::::::::::::::::::::::: all related style finished*/
+
+/* ::::::::::::::::::::::::::::::::::::::::::::::::::::::: about style start*/
+.about .title::after {
+    content: "who i am";
+}
+.about .about-content .left {
+    width: 45%;
+}
+.about .about-content .left img {
+    height: 350px;
+    width: 380px;
+    object-fit: cover;
+    border-radius: 5px;
+}
+.about .about-content .right {
+    width: 55%;
+}
+.about .about-content .right .text {
+    font-size: 25px;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+.about .about-content .right .text span {
+    color: #ff3503;
+}
+.about .about-content .right p {
+    text-align: justify;
+}
+.about .about-content .right a {
+    display: inline-block;
+    background: #ff3503;
+    color: #fff;
+    font-size: 20px;
+    padding: 5px 30px;
+    margin-top: 20px;
+    border-radius: 6px;
+    border: 2px solid #ff3503;
+    transition: all 0.3s ease;
+}
+.about .about-content .right a:hover {
+    background: none;
+    color: #ff3503;
+}
+/* ::::::::::::::::::::::::::::::::::::::::::::::::::::::: about style finished*/
+
+/* ::::::::::::::::::::::::::::::::::::::::::::::::::::::: Project style Start*/
+.project,
+.feedback {
+    background: #111;
+    color: #fff;
+}
+.project .title::before,
+.feedback .title::before {
+    background: #fff;
+}
+.project .title::after {
+    background: #111;
+    content: "previous work";
+}
+.carousel-project .card {
+    background: #222;
+    text-align: center;
+    border-radius: 5px;
+    padding: 20px 25px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+.carousel-project .card:hover {
+    background: #ff3503;
+}
+.carousel-project .card .box {
+    transition: all 0.3s ease;
+}
+.carousel-project .card .box:hover {
+    transform: scale(1.05);
+}
+.carousel-project .card i {
+    font-size: 50px;
+    color: #ff3503;
+    transition: color 0.3s ease;
+}
+.carousel-project .card:hover i {
+    color: #fff;
+}
+.carousel-project .card .text {
+    font-size: 25px;
+    font-weight: 500;
+    margin: 10px 0 7px 0;
+}
+.carousel-project .card p {
+    margin-bottom: 10px;
+}
+.project .more {
+    background: #ff3503;
+    border: 1px solid #ff3503;
+    color: #fff;
+    border-radius: 5px;
+    padding: 5px 10px;
+    font-size: 15px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+.project .card:hover .more {
+    background: #222;
+    color: #fff;
+    border: 1px solid #fff;
+}
+.project .owl-dots {
+    display: block !important;
+    text-align: center;
+    margin-top: 20px;
+}
+.project .owl-dot {
+    height: 13px;
+    width: 13px;
+    outline: none !important;
+    border-radius: 50%;
+    border: 2px solid #ff3503 !important;
+    margin: 0 5px;
+    transition: all 0.3s ease;
+}
+.project .owl-dot.active {
+    /* border-radius: 14px; */
+    height: 20px;
+    width: 20px;
+}
+.project .owl-dot.active,
+.project .owl-dot:hover {
+    background: #ff3503 !important;
+}
+/* ::::::::::::::::::::::::::::::::::::::::::::::::::::::: Project style finished*/
+
+/* ::::::::::::::::::::::::::::::::::::::::::::::::::::::: Skills style start*/
+.skills .title::after {
+    content: "what i know";
+}
+.skills .skills-content .column {
+    width: calc(50% - 30px);
+}
+.skills .skills-content .left .text {
+    font-size: 25px;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+.skills .skills-content .left p {
+    text-align: justify;
+}
+.skills .skills-content .left a {
+    background: #ff3503;
+    color: #fff;
+    display: inline-block;
+    border-radius: 5px;
+    font-size: 18px;
+    padding: 8px 16px;
+    margin: 10px 0;
+    transition: all 0.3s ease;
+    border: 1px solid #ff3503;
+}
+.skills .skills-content .left a:hover {
+    background: none;
+    color: #ff3503;
+}
+.skills .skills-content .right .bars {
+    margin-bottom: 15px;
+}
+.skills .skills-content .right .info {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 5px;
+}
+.skills .skills-content .right span {
+    font-weight: 500;
+    font-size: 18px;
+}
+.skills .skills-content .right .line {
+    height: 5px;
+    width: 100%;
+    background: lightgray;
+    position: relative;
+}
+.skills .skills-content .right .line::before {
+    content: "";
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    left: 0%;
+    top: 0%;
+    background: #ff3503;
+}
+.skills .skills-content .right .html::before {
+    width: 90%;
+}
+.skills .skills-content .right .css::before {
+    width: 60%;
+}
+.skills .skills-content .right .javascript::before {
+    width: 50%;
+}
+.skills .skills-content .right .php::before {
+    width: 40%;
+}
+.skills .skills-content .right .mysql::before {
+    width: 70%;
+}
+/* ::::::::::::::::::::::::::::::::::::::::::::::::::::::: Skills style finished*/
+
+/* ::::::::::::::::::::::::::::::::::::::::::::::::::::::: Feedback style start*/
+.feedback .title::after {
+    background: #111;
+    content: "valuable words";
+}
+.feedback .carousel .card {
+    background: #222;
+    border-radius: 6px;
+    padding: 25px 35px;
+    text-align: center;
+    translate: all 0.9s ease;
+}
+/* .feedback .carousel .card:hover {
+    background: #ff3503;
+} */
+.feedback .carousel .card .box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    translate: all 0.9s ease;
+}
+.feedback .carousel .card:hover .box {
+    transform: scale(1.05);
+}
+.feedback .carousel .card .text {
+    font-size: 25px;
+    font-weight: 500;
+    margin: 10px 0 7px 0;
+}
+.feedback .carousel .card img {
+    height: 150px;
+    width: 150px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 5px solid #ff3503;
+    translate: all 0.9s ease;
+}
+.feedback .carousel .card:hover img {
+    border-color: #fff;
+}
+.owl-dots {
+    text-align: center;
+    margin-top: 20px;
+}
+.owl-dot {
+    height: 13px;
+    width: 13px;
+    outline: none !important;
+    border-radius: 50%;
+    border: 2px solid #ff3503 !important;
+    margin: 0 5px;
+    transition: all 0.3s ease;
+}
+.owl-dot.active {
+    width: 35px;
+    border-radius: 14px;
+}
+.owl-dot.active,
+.owl-dot:hover {
+    background: #ff3503 !important;
+}
+/* ::::::::::::::::::::::::::::::::::::::::::::::::::::::: Feedback style finished*/
+
+/* ::::::::::::::::::::::::::::::::::::::::::::::::::::::: Contact style start*/
+.contact .title::after {
+    content: "get in touch";
+}
+.contact .contact-content .column {
+    width: calc(50% - 30px);
+}
+.contact .contact-content .text {
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+.contact .contact-content .left p {
+    text-align: justify;
+}
+.contact .contact-content .left .icons {
+    margin: 10px 0;
+}
+.contact .contact-content .row {
+    display: flex;
+    height: 65px;
+    align-items: center;
+}
+.contact .contact-content .row .info {
+    margin-left: 30px;
+}
+.contact .contact-content .row i {
+    font-size: 20px;
+    color: #ff3503;
+}
+.contact .contact-content .fa-envelope {
+    font-size: 16px !important;
+}
+.contact .contact-content .row .info .head {
+    font-weight: 500;
+}
+.contact .contact-content .row .info .sub-title {
+    color: #333;
+}
+.contact .right {
+    background: lightgray;
+    padding: 30px;
+    border-radius: 4px;
+}
+.contact .right form .fields {
+    display: flex;
+}
+.contact .right form .field,
+.contact .right form .fields .field {
+    height: 45px;
+    width: 100%;
+    margin-bottom: 15px;
+}
+.contact .right form .name {
+    margin-right: 10px;
+}
+.contact .right form .email {
+    margin-left: 10px;
+}
+.contact .right form .textarea {
+    height: 80px;
+    width: 100%;
+}
+.contact .right form .field input,
+.contact .right form .textarea textarea {
+    height: 100%;
+    width: 100%;
+    border: 1px solid lightgray;
+    border-radius: 6px;
+    outline: none;
+    padding: 0 15px;
+    font-size: 17px;
+    font-family: "Poppins", sans-serif;
+}
+.contact .right form .textarea textarea {
+    padding-top: 10px;
+    resize: none;
+}
+.contact .right form .button {
+    height: 47px;
+    width: 170px;
+}
+.contact .right form .button button {
+    height: 100%;
+    width: 100%;
+    border: 2px solid #ff3503;
+    background: #ff3503;
+    color: #fff;
+    font-size: 20px;
+    font-weight: 500;
+    border-radius: 6px;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+.contact .right form .button button:hover {
+    background: none;
+    color: #ff3503;
+}
+/* ::::::::::::::::::::::::::::::::::::::::::::::::::::::: Contact style finished*/
+
+/* ::::::::::::::::::::::::::::::::::::::::::::::::::::::: Footer style start*/
+footer {
+    background: #111;
+    padding: 20px 23px;
+    color: #fff;
+    text-align: center;
+}
+footer span a {
+    color: #ff3503;
+    text-decoration: none;
+}
+footer span a:hover {
+    text-decoration: underline;
+}
+/* ::::::::::::::::::::::::::::::::::::::::::::::::::::::: Footer style finished*/
+
+/* ::::::::::::::::::::::::::::::::::::::::::::::::::::::: responsive design start*/
+/* @media (max-width: 1440px) {
+    .home .max-width {
+        margin-left: 75px;
+    }
+} */
+@media (max-width: 1300px) {
+    .home .max-width {
+        margin-left: 0px;
+    }
+}
+
+@media (max-width: 1104px) {
+    .home .max-width {
+        margin-left: 0px;
+    }
+    .about .about-content .left img {
+        width: 380px;
+        height: 350px;
+    }
+}
+
+@media (max-width: 991px) {
+    .max-width {
+        padding: 0 50px;
+    }
+}
+
+@media (max-width: 947px) {
+    .max-width {
+        padding: 0 50px;
+    }
+    .navbar .menu {
+        position: fixed;
+        height: 100vh;
+        width: 100%;
+        left: -100%;
+        top: 0;
+        background: #111;
+        text-align: center;
+        padding: 80px 0;
+        transition: all 0.3s ease;
+    }
+    .navbar .menu.active {
+        left: 0;
+    }
+    .navbar .menu li {
+        display: block;
+    }
+    .navbar .menu li a {
+        display: inline-block;
+        margin: 20px 0;
+        font-size: 25px;
+    }
+
+    /* menu btn styling */
+    .menu-btn {
+        display: block;
+        z-index: 999;
+    }
+    .menu-btn i.active:before {
+        content: "\f00d";
+    }
+    .home .home-content a {
+        font-size: 23px;
+        padding: 10px 30px;
+    }
+    .about .about-content .column {
+        width: 100%;
+    }
+    .about .about-content .left {
+        display: flex;
+        justify-content: center;
+        margin: 0 auto 60px;
+    }
+    .about .about-content .right {
+        flex: 100%;
+    }
+    .project .serv-content .card,
+    .skills .skills-content .column,
+    .contact .contact-content .column {
+        width: 100%;
+        margin: 20px;
+    }
+}
+
+@media (max-width: 690px) {
+    .max-width {
+        padding: 0 23px;
+    }
+    .home .home-content .text-2 {
+        font-size: 35px;
+    }
+    .home .home-content .text-2 .name {
+        font-size: 45px;
+    }
+    .home .home-content .text-3 {
+        font-size: 30px;
+    }
+    .home .home-content a {
+        font-size: 20px;
+    }
+    .project .serv-content .card {
+        width: 100%;
+        margin: 20px;
+    }
+}
+
+@media (max-width: 500px) {
+    .home .home-content .text-2 {
+        font-size: 25px;
+    }
+    .home .home-content .text-2 .name {
+        font-size: 45px;
+    }
+    .home .home-content .text-3 {
+        font-size: 30px;
+    }
+    .about .about-content .left img {
+        width: 300px;
+        height: 275px;
+    }
+}
+/* ::::::::::::::::::::::::::::::::::::::::::::::::::::::: responsive design finished*/
